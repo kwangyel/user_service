@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const User = sequelize.define('Users', {
+  const User = sequelize.define('User', {
     username: DataTypes.STRING,
     password: DataTypes.STRING,
     cid: DataTypes.STRING
@@ -9,7 +9,6 @@ module.exports = (sequelize, DataTypes) => {
   });
   User.associate = function(models) {
     // associations can be defined here
-    // User.belongsTo(models.hasMany,{foreignKey:'structure_id',as:'structure'})
   };
   return User;
 };
